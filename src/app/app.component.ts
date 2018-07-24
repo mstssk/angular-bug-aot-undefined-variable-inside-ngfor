@@ -2,9 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <div *ngFor="let v of list">
+      {{ foobar }}
+    </div>
+  `
 })
 export class AppComponent {
-  title = 'app';
+  list = [1, 2, 3, 4];
 }
